@@ -1,6 +1,6 @@
 import React from "react";
 import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
-
+import { createAppContainer } from "react-navigation";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 import Login from "./Login";
@@ -33,13 +33,4 @@ const mainNavigation = createMaterialBottomTabNavigator(
     }
   }
 );
-
-/*
-Navegação do SwitchNavigator
-const StackNavigation = createSwitchNavigator({
-  Cadastro
-});
-
-const Drawer = createDrawerNavigator(mainNavigation);
-const App = createAppContainer(StackNavigation);
-*/
+export default createAppContainer(mainNavigation);
