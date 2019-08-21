@@ -5,6 +5,7 @@ import Icon from "react-native-vector-icons/FontAwesome";
 
 import Login from "./Login";
 import Dashboard from "./Dashboard";
+import Perfil from "./Perfil";
 
 Icon.loadFont();
 
@@ -22,7 +23,19 @@ const mainNavigation = createMaterialBottomTabNavigator(
       screen: Dashboard,
       navigationOptions: () => ({
         tabBarIcon: ({ focused }) => (
-          <Icon name="list" size={20} color={focused ? "#0B0B61" : "#ddd"} />
+          <Icon name="users" size={20} color={focused ? "#0B0B61" : "#ddd"} />
+        )
+      })
+    },
+    Perfil: {
+      screen: Perfil,
+      navigationOptions: () => ({
+        tabBarIcon: ({ focused }) => (
+          <Icon
+            name="user-circle-o"
+            size={20}
+            color={focused ? "#0B0B61" : "#ddd"}
+          />
         )
       })
     }
