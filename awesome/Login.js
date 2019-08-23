@@ -4,7 +4,8 @@ import {
   StyleSheet,
   View,
   TouchableOpacity,
-  ActivityIndicator
+  ActivityIndicator,
+  StatusBar
 } from "react-native";
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import { Icon } from "react-native-elements";
@@ -13,6 +14,7 @@ class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <StatusBar barStyle="dark-content" />
         <Text style={styles.titulo}>My Cards</Text>
         <TouchableOpacity
           style={styles.button}
