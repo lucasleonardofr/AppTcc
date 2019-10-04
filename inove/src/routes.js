@@ -3,7 +3,7 @@ import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom
 import {createAppContainer} from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import Login from './pages/Login';
+import Main from './pages/Main';
 import Dashboard from './pages/Dashboard';
 import Perfil from './pages/Perfil';
 
@@ -12,7 +12,7 @@ Icon.loadFont();
 const mainNavigation = createMaterialBottomTabNavigator(
   {
     Cards: {
-      screen: Login,
+      screen: Main,
       navigationOptions: () => ({
         tabBarIcon: ({focused}) => (
           <Icon name="id-card" size={20} color={focused ? '#234282' : '#ddd'} />

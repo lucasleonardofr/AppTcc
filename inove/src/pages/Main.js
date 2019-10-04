@@ -246,7 +246,7 @@ class Cadastro extends Component {
         </ScrollView>
       </View>
     );
-  } //
+  }
 }
 
 const nav = createStackNavigator({
