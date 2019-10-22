@@ -40,6 +40,7 @@ const mainNavigation = createMaterialBottomTabNavigator(
       }),
     },
   },
+
   {
     barStyle: {
       backgroundColor: '#fff',
