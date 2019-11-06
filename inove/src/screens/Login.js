@@ -30,7 +30,10 @@ class Login extends React.Component {
     return (
       <View style={styles.container}>
         <View>
-          <Image source={require('./i9medium.png')} style={styles.imageMenu} />
+          <Image
+            source={require('../img/i9medium.png')}
+            style={styles.imageMenu}
+          />
         </View>
         <TextInput
           style={styles.inputBox}

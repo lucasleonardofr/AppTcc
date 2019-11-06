@@ -250,8 +250,8 @@ class Cadastro extends Component {
 }
 
 const nav = createStackNavigator({
-  HomeScreen: Home,
-  Teste: Cadastro,
+  HomeScreen: {screen: Home},
+  Teste: {screen: Cadastro},
 });
 
 const AppContainer = createAppContainer(nav);
@@ -328,7 +328,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-export default class Login extends React.Component {
+export default class Main extends React.Component {
   render() {
     return <AppContainer />;
   }
