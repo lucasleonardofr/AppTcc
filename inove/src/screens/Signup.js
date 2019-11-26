@@ -15,12 +15,26 @@ class Signup extends React.Component {
     email: '',
     password: '',
   };
-  handleSignUp = () => {
+
+  handleSignUp = async () => {
     const {email, password} = this.state;
-    Firebase.auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then(() => this.props.navigation.navigate('Main'))
-      .catch(error => console.log(error));
+    try {
+      const {user} = await Firebase.auth().createUserWithEmailAndPassword(
+        email,
+        password,
+      );
+      const userReference = Firebase.firestore()
+        .collection('users')
+        .doc(user.uid);
+
+      await userReference.set({
+        email: user.email,
+      });
+
+      this.props.navigation.navigate('Main');
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   render() {

@@ -1,4 +1,4 @@
-console.disableYellowBox = true;
+//console.disableYellowBox = true;
 import React, {Component} from 'react';
 import {
   Text,

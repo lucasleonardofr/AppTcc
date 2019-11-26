@@ -10,6 +10,7 @@ import {
   Image,
 } from 'react-native';
 import Firebase from '../config/Firebase';
+import AsyncStorage from 'react-native';
 
 class Login extends React.Component {
   state = {
@@ -17,8 +18,16 @@ class Login extends React.Component {
     password: '',
   };
 
+  async componentDidMount() {
+    Firebase;
+    await AsyncStorage.setItem('email', 'teste');
+    let email = await AsyncStorage.getItem('email');
+    console.log(email);
+  }
+
   handleLogin = () => {
     const {email, password} = this.state;
+    console.log('Lucas');
 
     Firebase.auth()
       .signInWithEmailAndPassword(email, password)
